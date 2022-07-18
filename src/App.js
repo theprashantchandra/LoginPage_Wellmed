@@ -9,15 +9,6 @@ import { auth } from "./firebase";
 import "./App.css";
 
 function App() {
-  const [userName, setUserName] = useState("");
-
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUserName(user.displayName);
-      } else setUserName("");
-    });
-  }, []);
 
   return (
     <div className="App">
